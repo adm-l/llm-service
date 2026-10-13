@@ -1,0 +1,11 @@
+services:
+  llm-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      MODEL_BACKEND: ${MODEL_BACKEND:-stub}
+      MODEL_ID: ${MODEL_ID:-Qwen/Qwen2.5-0.5B-Instruct}
+      MODEL_DEVICE: ${MODEL_DEVICE:-auto}
+      MAX_INPUT_CHARS: ${MAX_INPUT_CHARS:-12000}
+    restart: unless-stopped
