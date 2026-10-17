@@ -36,6 +36,10 @@ Default is stub mode. To serve a real model, build an image with `requirements-m
 curl http://127.0.0.1:8000/v1/chat/completions -H 'Content-Type: application/json' -d '{"messages":[{"role":"user","content":"Explain causal attention"}],"max_tokens":100}'
 ```
 
+## Node.js integration guide
+
+See [Node.js LLM Integration: Architecture, Setup, and Runbook](docs/nodejs-llm-integration.md) for the request lifecycle, architecture diagrams, installation, Express API example, response handling, local service integration, troubleshooting, and production hardening.
+
 ## Configuration
 `MODEL_BACKEND=stub|transformers`, `MODEL_ID=Qwen/Qwen2.5-0.5B-Instruct`, `MODEL_DEVICE=auto|cpu`, `MAX_INPUT_CHARS=12000`.
 
